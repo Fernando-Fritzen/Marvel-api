@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        
+    </body>
+    <script>
+        const timeStamp = '1625700828';
+        const apiKey = '764c4f078438a50cf539989dc3b48691';
+        const md5 = 'fa0eda0ffcfdc2292d0d49b49333b03f';
+
+        fetch(`https://gateway.marvel.com:443/v1/public/characters?ts=${timeStamp}&apikey=${apiKey}&hash=${md5}&limit=6`
+        ).then((response) => {
+            return response.json();
+        }).then((jsonParsed) => {
+            console.log(jsonParsed);
+        })
+    </script>
+</html>
